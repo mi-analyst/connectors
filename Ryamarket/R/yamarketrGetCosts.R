@@ -10,10 +10,10 @@ yamarketrGetCosts <- function(Campaigns,
                        clicks = numeric(0),
                        spending = numeric(0),
                        shows = numeric(0),
-					   detailedStats.type = character(0),
-					   detailedStats.clicks = numeric(0),
-					   detailedStats.shows = numeric(0),
-					   detailedStats.spending = numeric(0)
+					   dtype = character(0),
+					   dclicks = numeric(0),
+					   dshows = numeric(0),
+					   dspending = numeric(0)
   )
 
   nrowCampaigns <- ifelse((is.vector(Campaigns) | is.numeric(Campaigns) | is.character(Campaigns)), length(Campaigns), nrow(Campaigns))
@@ -54,7 +54,10 @@ yamarketrGetCosts <- function(Campaigns,
                                        clicks = data$mainStats$clicks,
                                        shows = as.integer(data$mainStats$shows),
                                        spending = data$mainStats$spending,
-									   detailedStats = data$mainStats$detailedStats,
+									   dtype = data$stats$detailedStats$type,
+									   dclicks = data$stats$detailedStats$clicks,
+									   dshows = as.integer(data$stats$detailedStats$shows),
+									   dspending = data$stats$detailedStats$spending,
                                        stringsAsFactors = FALSE)
     )
   }
