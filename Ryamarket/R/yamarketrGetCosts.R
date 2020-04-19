@@ -29,7 +29,7 @@ yamarketrGetCosts <- function(Campaigns,
                     paste0("-",fetchBy),
                     ".json?fromDate=", fromDate,
                     "&toDate=",toDate,
-                    "&fields=shows,mobile",ifelse(model == 1, ",model", ""),
+                    "&fields=mobile,shows",ifelse(model == 1, ",model", ""),
                     ifelse(places == 1, "&byPlaces=1", ""))
     raw <- httr::RETRY("GET", 
                        url = query, 
@@ -50,7 +50,6 @@ yamarketrGetCosts <- function(Campaigns,
                                        clicks = data$mainStats$clicks,
                                        shows = as.integer(data$mainStats$shows),
                                        spending = data$mainStats$spending,
-									   detailedStats = data$mainStats$detailedStats,
                                        stringsAsFactors = FALSE)
     )
   }
