@@ -50,6 +50,10 @@ yamarketrGetCosts <- function(Campaigns,
                                        clicks = data$mainStats$clicks,
                                        shows = as.integer(data$mainStats$shows),
                                        spending = data$mainStats$spending,
+									   detailedStats.type = data$stats$detailedStats$type
+									   detailedStats.clicks = data$stats$detailedStats$clicks,
+									   detailedStats.shows = as.integer(data$stats$detailedStats$shows),
+									   detailedStats.spending = data$stats$detailedStats$spending,
                                        stringsAsFactors = FALSE)
     )
   }
