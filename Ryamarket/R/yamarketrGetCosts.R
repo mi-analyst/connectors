@@ -29,12 +29,12 @@ yamarketrGetCosts <- function(Campaigns,
                     paste0("-",fetchBy),
                     ".json?fromDate=", fromDate,
                     "&toDate=",toDate,
-                    "&fields=shows",ifelse(model == 1, ",model", ""),
+                    "&fields=shows,mobile",ifelse(model == 1, ",model", ""),
                     ifelse(places == 1, "&byPlaces=1", ""))
     raw <- httr::RETRY("GET", 
                        url = query, 
                        httr::add_headers(Authorization = paste("OAuth oauth_token=", Token,
-                                                               ",oauth_client_id=8943390a15784189a8538ce5c4d57dfb")),
+                                                               ",oauth_client_id=e4c42de7108542838673c01138e79bbe")),
                        times = 5, 
                        pause_min = 20, 
                        terminate_on_success=FALSE
@@ -50,6 +50,7 @@ yamarketrGetCosts <- function(Campaigns,
                                        clicks = data$mainStats$clicks,
                                        shows = as.integer(data$mainStats$shows),
                                        spending = data$mainStats$spending,
+									   detailedStats = data$mainStats$detailedStats,
                                        stringsAsFactors = FALSE)
     )
   }

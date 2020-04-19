@@ -5,7 +5,7 @@ yamarketrGetCampaigns <- function(Login = NULL, TokenPath = getwd()){
   result <- data.frame(id = character(0), domain = character(0), state = numeric(0), stateReasons = numeric(0))
   while(nrow(result) == 0) {
     query <- "https://api.partner.market.yandex.ru/v2/campaigns.json"
-    raw <- httr::GET(url=query, httr::add_headers(Authorization=paste("OAuth oauth_token=",Token,",oauth_client_id=8943390a15784189a8538ce5c4d57dfb")))
+    raw <- httr::GET(url=query, httr::add_headers(Authorization=paste("OAuth oauth_token=",Token,",oauth_client_id=e4c42de7108542838673c01138e79bbe")))
     data <- jsonlite::fromJSON(httr::content(raw,type="text", encoding = "UTF-8"), flatten = TRUE)
     if(raw$status_code > 200){
       stop(paste(data$errors$code, "-", data$errors$message))
