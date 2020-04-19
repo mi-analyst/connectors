@@ -9,7 +9,11 @@ yamarketrGetCosts <- function(Campaigns,
                        placeGroup = numeric(0),
                        clicks = numeric(0),
                        spending = numeric(0),
-                       shows = numeric(0)
+                       shows = numeric(0),
+					   dtype = character(0),
+					   dclicks = numeric(0),
+					   dshows = numeric(0),
+					   dspending = numeric(0)
   )
 
   nrowCampaigns <- ifelse((is.vector(Campaigns) | is.numeric(Campaigns) | is.character(Campaigns)), length(Campaigns), nrow(Campaigns))
