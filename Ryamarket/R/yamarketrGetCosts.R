@@ -34,7 +34,7 @@ yamarketrGetCosts <- function(Campaigns,
     raw <- httr::RETRY("GET", 
                        url = query, 
                        httr::add_headers(Authorization = paste("OAuth oauth_token=", Token,
-                                                               ",oauth_client_id=e4c42de7108542838673c01138e79bbe")),
+                                                               ",oauth_client_id=8943390a15784189a8538ce5c4d57dfb")),
                        times = 5, 
                        pause_min = 20, 
                        terminate_on_success=FALSE
