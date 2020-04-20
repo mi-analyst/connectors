@@ -1,16 +1,12 @@
 # yamarketR - пакет для работы <br/>с Партнёрским API Яндекс.Маркета <br/>на языке R
 
-<p align="center">
-<img src="https://www.mediaguru.ru/upload/mrykin_github_cover.png" height="267">
-</p>
-
 
 ## Краткое описание
 
 Данный пакет предназначен для получения данных из Яндекс.Маркета с помощью языка R. 
 
 ### Оглавление:
-*   [Установка пакета](https://github.com/mrykin/yamarketr#установка-пакета-yamarketr)
+*   [Установка пакета](https://github.com/mi-analyst/connectors/Ryamarket#установка-пакета-yamarketr)
 *   [Авторизация в API Яндекс Маркет](https://github.com/mrykin/yamarketr#авторизация-в-api-яндекс-маркет)
 *   Функции пакета:
 	*   [Список кампаний (магазинов)](https://github.com/mrykin/yamarketr#загрузка-списка-кампаний-магазинов)
